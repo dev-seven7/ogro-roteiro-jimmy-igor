@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Roteiro · Gravação Jimmy &amp; Igor · 24/09</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&display=swap">
+<style>
+:root{
+  --ground:#B9B9B6;
+  --paper:#CBCBC8;
+  --paper-2:#D6D6D3;
+  --white:#E9E9E6;
+  --ink:#121211;
+  --ink-2:#3D3D3A;
+  --ink-3:#6E6E68;
+  --line:#9C9C97;
+  --line-soft:#AFAFA9;
+  --pink:#D80A5F;
+  --ember:#B5350F;
+  --gold:#8A6A1E;
+  --shadow:0 2px 4px rgba(18,18,17,.05), 0 24px 60px -36px rgba(18,18,17,.55);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--ground);color:var(--ink);
+  font-family:"Poppins",system-ui,sans-serif;
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+.osw{font-family:"Oswald",Impact,sans-serif}
+.hand{font-family:"Caveat",cursive;color:var(--pink);font-weight:600}
+
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+
+/* cover */
+.cover{
+  min-height:min(64vh,540px);display:flex;flex-direction:column;justify-content:center;
+  background:var(--paper-2);border-bottom:1px solid var(--line);
+  padding:64px 0 48px;
+}
+.eyebrow{
+  font-family:"Oswald",sans-serif;font-size:11.5px;font-weight:500;
+  letter-spacing:.38em;text-transform:uppercase;color:var(--ember);margin-bottom:18px;
+}
+.cover h1{
+  font-family:"Oswald",sans-serif;font-weight:700;text-transform:uppercase;
+  font-size:clamp(32px,6vw,58px);line-height:1.03;letter-spacing:.01em;margin:0 0 20px;
+}
+.cover .lead{font-size:clamp(15px,2vw,18px);line-height:1.6;font-weight:200;max-width:58ch;color:var(--ink-2);margin:0 0 32px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 34px;font-family:"Oswald",sans-serif;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.meta b{color:var(--ink);font-weight:500}
+
+section{padding:44px 0;border-bottom:1px solid var(--line-soft)}
+section:last-of-type{border-bottom:none}
+.kicker{
+  font-family:"Oswald",sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:.32em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px;
+}
+h2{
+  font-family:"Oswald",sans-serif;font-weight:700;text-transform:uppercase;
+  font-size:clamp(24px,3.4vw,36px);letter-spacing:.03em;margin:0 0 22px;line-height:1.1;
+}
+h2 .n{color:var(--ember)}
+p{line-height:1.68;color:var(--ink-2);font-weight:300}
+.lead{font-size:clamp(16px,2vw,19px);max-width:64ch}
+
+/* narrativa camadas */
+.camadas{display:grid;gap:10px;margin:22px 0}
+.camada{
+  background:var(--white);border-radius:3px;padding:16px 20px;
+  border-left:3px solid var(--ember);display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;
+}
+.camada b{font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:14.5px;color:var(--ink)}
+.camada span{color:var(--ink-2);font-size:14.5px}
+.camada.extra{border-left-color:var(--gold)}
+
+/* logistics card */
+.logi{background:var(--white);border-radius:3px;padding:26px 28px;border-top:2px solid var(--gold);margin-top:20px}
+.logi dl{display:grid;grid-template-columns:auto 1fr;gap:8px 20px;margin:0}
+.logi dt{font-family:"Oswald",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap}
+.logi dd{margin:0;color:var(--ink)}
+.logi .note{margin-top:16px;padding-top:16px;border-top:1px solid var(--line-soft);font-size:14px;color:var(--ink-2)}
+
+/* quadro block */
+.quadro-head{margin-bottom:26px}
+.quadro-head .qtag{
+  font-family:"Oswald",sans-serif;font-size:11px;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--ember);margin-bottom:8px;
+}
+.quadro-head p{max-width:70ch}
+
+/* episode card */
+.ep{background:var(--white);border-radius:3px;padding:26px 28px;border-top:2px solid var(--ember);margin-bottom:20px}
+.ep.pink{border-top-color:var(--pink)}
+.ep.gold{border-top-color:var(--gold)}
+.ep-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px 20px;margin-bottom:16px}
+.ep-head .epn{font-family:"Oswald",sans-serif;font-weight:600;text-transform:uppercase;font-size:16.5px;letter-spacing:.04em;color:var(--ink)}
+.ep-head .who{font-family:"Oswald",sans-serif;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ember)}
+
+.principal{font-size:16.5px;color:var(--ink);font-weight:400;margin:0 0 16px;line-height:1.5}
+.label{
+  font-family:"Oswald",sans-serif;font-size:11px;font-weight:500;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ink-3);margin:18px 0 8px;
+}
+.label:first-of-type{margin-top:0}
+ul.q{margin:0;padding-left:20px}
+ul.q li{margin-bottom:7px;color:var(--ink-2);line-height:1.55;font-size:15px}
+ul.q li::marker{color:var(--ember)}
+ul.q.nested{margin-top:6px}
+
+.quote-box{
+  background:var(--paper-2);border-radius:3px;padding:16px 20px;margin:14px 0;
+  font-family:"Oswald",sans-serif;font-weight:400;font-size:15.5px;line-height:1.5;color:var(--ink);
+}
+.quote-box em{font-family:"Poppins",sans-serif;font-style:normal;display:block;margin-top:6px;font-size:12px;letter-spacing:.04em;color:var(--ink-3);font-weight:300}
+
+.steps{margin:14px 0 0;padding-left:0;list-style:none;counter-reset:step}
+.steps li{counter-increment:step;padding-left:32px;position:relative;margin-bottom:10px;color:var(--ink-2);font-size:14.5px;line-height:1.55}
+.steps li::before{
+  content:counter(step);position:absolute;left:0;top:0;
+  font-family:"Oswald",sans-serif;font-weight:600;color:var(--ember);font-size:14px;
+}
+
+.refs{margin-top:14px;padding-top:14px;border-top:1px solid var(--line-soft)}
+.refs a{color:var(--ember);word-break:break-all;font-size:13px}
+.refs a:not(:last-child)::after{content:" · ";color:var(--ink-3)}
+
+.cta-list{margin:0;padding-left:20px}
+.cta-list li{margin-bottom:8px;font-size:15px;color:var(--ink-2)}
+.cta-list li::marker{color:var(--pink)}
+
+footer{padding:36px 0 64px;text-align:center}
+footer p{font-family:"Oswald",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+
+@media (max-width:520px){
+  .wrap{padding:0 18px}
+  .logi dl{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="wrap">
+    <div class="eyebrow">Ogro Steaks × Seven7</div>
+    <h1 class="osw">Roteiro do dia<br>Jimmy &amp; Igor</h1>
+    <p class="lead">Gravação de conteúdo <span class="hand">24 de setembro</span>, iniciando o plano de conteúdo e os quadros propostos com os sócios.</p>
+    <div class="meta">
+      <span><b>Data</b> Quinta, 24/09</span>
+      <span><b>Horário</b> 14h</span>
+      <span><b>Local</b> Escritório, Rua Gavião Peixoto 148, Niterói</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section>
+    <div class="kicker">Objetivo</div>
+    <h2>Iniciar o plano de conteúdo <span class="n">e</span> os quadros propostos</h2>
+    <p class="lead">Primeira gravação com Jimmy e Igor a partir da narrativa central definida abaixo, cobrindo os quatro quadros do plano de conteúdo da Ogro.</p>
+
+    <div class="logi">
+      <dl>
+        <dt>Quando</dt><dd>Quinta-feira, 24/09, 14h</dd>
+        <dt>Onde</dt><dd>Escritório, Rua Gavião Peixoto 148, Niterói</dd>
+      </dl>
+      <div class="note">O Igor combinou que, se tivesse outro local, avisaria. Por enquanto vai ser só no escritório, porque precisamos de variações de cenário (em pé, sentados, andando). Vamos pedir delivery pra compor cenário e takes, e lá dá pra fazer isso.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">Narrativa central do dia</div>
+    <h2>Três camadas <span class="n">+</span> um extra</h2>
+    <p>Os três quadros de Jimmy e Igor são três camadas da mesma dupla:</p>
+    <div class="camadas">
+      <div class="camada"><b>Papo de Ogro</b><span>a dupla como autoridade, o que eles sabem</span></div>
+      <div class="camada"><b>Ogro Responde</b><span>a dupla como proximidade, o que eles ouvem</span></div>
+      <div class="camada"><b>Isso Deu Ogro</b><span>a dupla como história, o que eles viveram</span></div>
+      <div class="camada extra"><b>+ Já Deu por Hoje</b><span>1º episódio, com o time de marketing no escritório</span></div>
+    </div>
+    <p>O fio que amarra os três: Jimmy entra com repertório, gastronomia e memória. Igor entra com técnica, operação, bastidor e humor. Junto, isso vira dinâmica, discordância, história e personalidade. Sozinho, cada um sustenta autoridade no seu próprio pilar.</p>
+  </section>
+
+  <section>
+    <div class="quadro-head">
+      <div class="qtag">Quadro 1 de 4</div>
+      <h2>Papo de Ogro</h2>
+      <p>Cada episódio tem a pergunta principal e os complementares.</p>
+    </div>
+
+    <div class="ep">
+      <div class="ep-head"><span class="epn">Ep 01 · O que faz um hambúrguer ser realmente bom?</span><span class="who">Jimmy</span></div>
+      <p class="principal">O que faz um hambúrguer ser realmente bom?</p>
+      <div class="label">Complementares</div>
+      <ul class="q">
+        <li>O que você acha superestimado num hambúrguer hoje?</li>
+        <li>E o que você acha que deveria ser proibido ter em hambúrguer?</li>
+        <li>Como chef, qual é a sua opinião sobre hambúrguer que muita gente discordaria?</li>
+      </ul>
+      <div class="label">Gancho (opção)</div>
+      <div class="quote-box">"Como um bom crítico gastronômico, hambúrguer bom de verdade tem que..."</div>
+      <div class="label">CTA final (opção)</div>
+      <div class="quote-box">"E pra você, o que faz um hambúrguer ser bom? Comenta aqui."</div>
+      <div class="label">Referências de takes</div>
+      <p>Mini documentário: imagens de preparo e bastidores do hambúrguer sendo feito enquanto ele fala, da experiência.</p>
+      <div class="refs"><a href="https://www.instagram.com/p/DdCB0w2uLuu/" target="_blank" rel="noopener">instagram.com/p/DdCB0w2uLuu</a></div>
+    </div>
+
+    <div class="ep pink">
+      <div class="ep-head"><span class="epn">Ep 02 · O que ninguém vê antes do pedido chegar</span><span class="who">Igor</span></div>
+      <p class="principal">O que ninguém vê antes do pedido chegar?</p>
+      <div class="label">Complementares</div>
+      <ul class="q">
+        <li>Qual cuidado com o pedido o cliente nem imagina que existe?</li>
+        <li>Tem alguma história que já aconteceu e virou aprendizado, e que mudou a forma como vocês fazem hoje?</li>
+      </ul>
+      <div class="label">Gancho, opção fofoca/exposed</div>
+      <ul class="q">
+        <li>"Não era pra eu contar isso, mas...", com o Igor se aproximando da câmera, como quem conta um segredo. Funciona só com ele no escritório, sem depender de imagem de cozinha.</li>
+        <li>Texto na tela "Exposed da cozinha da Ogro". Ele começa a falar e corta pra operação acontecendo (B-roll).</li>
+        <li>"Senta que lá vem fofoca de cozinha." Ele de fato senta, como numa conversa entre amigos.</li>
+      </ul>
+      <div class="label">Gancho, opção quebra de expectativa</div>
+      <div class="quote-box">"Eu tô aqui no escritório, mas a essa hora tem [X pedidos / gente na chapa] acontecendo agora." Corta pra cozinha a todo vapor (B-roll).</div>
+      <div class="label">Referências de takes</div>
+      <p>Como não teremos gravação na operação nesse dia, o gancho inicial é com o Igor no escritório, e corta pra bastidor de operação já gravado. Exemplo mostrando um diferencial que o cliente não vê, mas que faz diferença no cuidado do pedido:</p>
+      <div class="refs">
+        <a href="https://www.instagram.com/p/Dcb98a7J19X/" target="_blank" rel="noopener">instagram.com/p/Dcb98a7J19X</a>
+        <a href="https://www.instagram.com/reels/DaoHNHapOE6/" target="_blank" rel="noopener">instagram.com/reels/DaoHNHapOE6</a>
+      </div>
+    </div>
+
+    <div class="ep">
+      <div class="ep-head"><span class="epn">Ep 03 · A gente nunca concordou nisso</span><span class="who">Jimmy + Igor</span></div>
+      <p>Os dois sentados, um do lado do outro, falando de um determinado produto enquanto comem, o produto exposto na mesa/na imagem. A polêmica/gancho pode nascer do próprio produto do cardápio, ou de uma pergunta que eles desenvolvem a partir dela.</p>
+      <p class="principal">No que vocês nunca concordaram em todos esses anos de Ogro?</p>
+      <div class="label">Direcionamento</div>
+      <p>A resposta é livre, mas a conversa deve ir pra produto ou operação. Se fugirem do tema, puxar com exemplo:</p>
+      <ul class="q">
+        <li>"Tem algum hambúrguer do cardápio que um quis e o outro não?"</li>
+        <li>"Alguma decisão da cozinha ou do delivery em que vocês bateram de frente?"</li>
+      </ul>
+      <p>A ideia é eles falarem de forma orgânica e natural, e o gancho sai na edição, de acordo com o que eles falarem, criando o contexto e a narrativa.</p>
+    </div>
+
+    <div class="ep gold">
+      <div class="ep-head"><span class="epn">Ep 04 · O que o White Castle ensinou pra gente</span><span class="who">Jimmy</span></div>
+      <p class="principal">O que o White Castle ensinou pra vocês?</p>
+      <div class="label">Complementares</div>
+      <ul class="q">
+        <li>O que uma marca como a Ogro, que não é e não quer ser fast-food, aprende com ela?</li>
+        <li>Onde fica a linha entre o que a Ogro aprendeu com o fast-food e o que ela nunca vai ser?</li>
+      </ul>
+      <div class="label">Gancho (opção)</div>
+      <div class="quote-box">"O fast-food acertou numa coisa e errou em todo o resto."<em>a solução é mostrar o que a Ogro manteve e o que jogou fora</em></div>
+      <div class="label">Como o vídeo se organiza</div>
+      <ol class="steps">
+        <li>Gancho, com a dor.</li>
+        <li>A história, com o Jimmy contando o que foi o White Castle e o que ele fez de diferente.</li>
+        <li>A virada, com o aprendizado e o que a Ogro não copiou.</li>
+        <li>A solução, com o que isso muda no pedido de quem pede Ogro. É o momento de conectar com "aqui eu sei que vai ser bom".</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="quadro-head">
+      <div class="qtag">Quadro 2 de 4</div>
+      <h2>Ogro Responde</h2>
+      <p>Curadoria aberta, sem pergunta fixa. Pra reação render, levar uma mistura de comentários: um engraçado, um polêmico, um emocionante e uma crítica. Deixar os dois reagirem livremente, o gancho sai do próprio vídeo.</p>
+    </div>
+
+    <div class="ep pink">
+      <div class="label">CTAs finais (opções)</div>
+      <ul class="cta-list">
+        <li>"Elogio, crítica ou desabafo: a gente lê tudo. Até os que a gente não queria."</li>
+        <li>"O próximo comentário que virar vídeo pode ser o seu. Capricha."</li>
+        <li>"Deixa seu comentário aqui. O Igor vai fingir que não ficou chateado."</li>
+        <li>"Se você pudesse mudar uma coisa na Ogro, o que seria?" <em style="font-style:normal;color:var(--ink-3)">rende material pro formato "Vocês falaram, a gente ouviu"</em></li>
+      </ul>
+      <div class="label">Exemplo de edição</div>
+      <p>Digamos que seja o McManis, alguém elogiou/deu feedback. Jimmy lê o feedback enquanto fala do processo do hambúrguer, com tela dividida:</p>
+      <div class="quote-box">"Não é à toa que esse é o carro chefe da casa. Foi criado por mim, que sou um cara exigente..."</div>
+      <div class="refs">
+        <a href="https://www.instagram.com/reel/Dc__YJhJI_N/" target="_blank" rel="noopener">instagram.com/reel/Dc__YJhJI_N</a>
+        <a href="https://www.instagram.com/reel/Dc4hzjFtK7M/" target="_blank" rel="noopener">instagram.com/reel/Dc4hzjFtK7M</a>
+      </div>
+      <p style="margin-top:14px">Considerar gancho de tela dividida + frase de impacto.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="quadro-head">
+      <div class="qtag">Quadro 3 de 4</div>
+      <h2>Isso Deu Ogro</h2>
+    </div>
+
+    <div class="ep">
+      <div class="ep-head"><span class="epn">Ep 01 · Antes de dar Ogro</span></div>
+      <p class="principal">Quem eram vocês antes da Ogro nascer?</p>
+      <div class="label">Complementos</div>
+      <ul class="q">
+        <li>Como vocês se conheceram?</li>
+        <li>O que fez vocês decidirem criar a Ogro juntos?</li>
+        <li>Qual foi a coisa mais inusitada que aconteceu no começo da Ogro?</li>
+      </ul>
+    </div>
+
+    <div class="ep pink">
+      <div class="ep-head"><span class="epn">Ep 02 · Isso parecia uma boa ideia</span></div>
+      <p class="principal">Por que a Ogro parecia uma boa ideia?</p>
+      <div class="label">Complementos</div>
+      <ul class="q">
+        <li>O que vocês imaginavam que ia ser, e quando perceberam que não seria tão simples assim?</li>
+        <li>Teve alguma ideia que vocês acharam genial e que deu muito errado? <em style="font-style:normal;color:var(--ink-3)">candidata a gancho: abrir com a história ruim e virar pro outro lado da moeda</em></li>
+      </ul>
+      <div class="label">Gancho (opção)</div>
+      <div class="quote-box">"No começo, parecia fácil. Spoiler: não foi."</div>
+    </div>
+
+    <div class="ep">
+      <div class="ep-head"><span class="epn">Ep 03 · Aí começou o problema</span><span class="who">Jimmy + Igor</span></div>
+      <p class="principal">Qual foi o primeiro perrengue da Ogro?</p>
+      <p style="font-size:14px;color:var(--ink-3)">Depois que um contar, perguntar ao outro "e na sua visão, como foi?", as versões se complementam ou se contradizem.</p>
+      <div class="label">Complemento</div>
+      <ul class="q">
+        <li>Teve alguma vez em que vocês acharam que ia dar muito errado, mas saíram por cima?</li>
+      </ul>
+    </div>
+
+    <div class="ep gold">
+      <div class="ep-head"><span class="epn">Ep 04 · Jimmy queria de um jeito. Igor, de outro.</span></div>
+      <p style="font-size:14px;color:var(--ink-3)">Confessionário, cada um sozinho, respostas rápidas pra cruzar na edição.</p>
+      <p class="principal">Na história da Ogro, como você queria fazer e como o Jimmy/Igor queria?</p>
+      <div class="label">Bate-bola</div>
+      <ul class="q">
+        <li>No que vocês mais entram em embate?</li>
+        <li>Uma coisa que vocês sempre discordam?</li>
+        <li>Quem cede primeiro?</li>
+        <li>O que ele faz melhor que você?</li>
+        <li>Uma coisa em que vocês concordam sem nem precisar conversar?</li>
+        <li>Em uma palavra, o que o outro é pra Ogro?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="quadro-head">
+      <div class="qtag">Quadro 4 de 4</div>
+      <h2>Já Deu por Hoje</h2>
+    </div>
+
+    <div class="ep pink">
+      <div class="ep-head"><span class="epn">Ep 01 · Rapidinho?</span><span class="who">Time de marketing</span></div>
+      <div class="label">Quadro</div>
+      <p>Situação reconhecível da vida adulta, pequena tensão, a Ogro entrando como o momento em que a pessoa finalmente se permite parar. Humor, conforto, rotina real, trends, estética simples e próxima. Espaço pra Jimmy e/ou Igor aparecerem no relax, longe da "skin de trabalho" (pedido da Bárbara).</p>
+      <div class="label">Quem grava</div>
+      <p>Time de marketing, com espaço pros sócios no relax.</p>
+      <div class="label">Cena</div>
+      <ul class="q">
+        <li>Notebook fechando</li>
+        <li>Chega mensagem: "rapidinho, consegue entrar numa call?"</li>
+        <li>Close na cara de derrota</li>
+        <li>Corte pra Ogro chegando</li>
+      </ul>
+      <p style="font-size:14px;color:var(--ink-3)">Pode gravar no próprio escritório.</p>
+      <div class="label">Copy</div>
+      <div class="quote-box">"Call aos 45' do 2º tempo? Só se for com Ogro!"</div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>Ogro Steaks × Seven7 · roteiro interno de gravação</p>
+</footer>
+
+</body>
+</html>
